@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C to F</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(184, 212, 253);
+        }
+
+        .main-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 56%;
+            border-radius: 6px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 8px 2px rgb(140, 171, 230);
+            padding: 10px 6px 10px 6px;
+        }
+
+        .display{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .box {
+            width: 50%;
+            margin: 10px 6px 10px 6px;
+            border: 3px solid rgb(0, 28, 70);
+        }
+
+        input {
+            padding: 6px 10px;
+            border: none;
+            width: 100%;
+            font-size: 3rem;
+            height: 100px;
+        }
+        #F-value{
+            padding: 6px 10px;
+            border: none;
+            width: 100%;
+            font-size: 3rem;
+            height: 100px;    
+        }
+        .main-heading{
+            width: 100%;
+            margin: 10px 12px 10px 12px;
+            /* background-color: rgb(146, 7, 7); */
+            color: black;
+            padding: 10px 0px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 3.6rem;
+            font-weight: 700;
+            /* padding: 10px; */
+        }
+        .main-heading span{
+            margin: 0px 10px
+            /* text-align: center; */
+        }
+        .heading {
+            font-size: 1.4rem;
+            background-color: rgb(175, 175, 175);
+            color: white;
+            width: 100%;
+            padding: 4px 0px;
+        }
+        .heading span{
+            margin: 0px 10px;
+        }
+        .equal{
+            font-size: 3rem;
+        }
+        .btn{
+            width: 101%;
+        }
+        .btn button{
+            width: 100%;
+            font-size: 1.4rem;
+            padding: 10px;
+
+        }
+    </style>
+    <script>
+        function Convert(){
+            let c = document.getElementById("C-value").value ;
+            let f = (9/5) * parseFloat(c) + 32 ;
+            document.getElementById("F-value").value = f ;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="main-heading">
+            <Span>
+                Temperature Conversion
+            </Span>
+        </div>
+        <div class="display">
+            <div class="C-box  box">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter Number" id="C-value">
+                </div>
+                <div class="heading">
+                    <span>
+                        °C (Celcius)
+                    </span>
+                </div>
+            </div>
+            <div class="equal">
+                =
+            </div>
+            <div class="°F-box box">
+                <div class="output-box">
+                        <input type="text" placeholder="Converted Value" id="F-value">
+                </div>
+                <div class="heading">
+                    <span>
+                        °F (Fahrenheit)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button id="event"  class="btn btn-primary" onclick = "Convert()">
+                Convert
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
